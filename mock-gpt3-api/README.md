@@ -10,6 +10,10 @@ The mock server does not require headers to be set, and I'm assuming that respon
 
 I'd love an invite to be able to run these experiments for real.
 
+# Running the mock server
+
+Requires Java 8 or later.
+
 To run the experiments against this mock server, change the urls in the openai_api.py file, replacing 'https' with 'http' and replacing 'api.openai.com' with 'localhost:8080'. 
 
 The mock server can be run via the following command from this directory:
