@@ -20,7 +20,7 @@ logging.basicConfig(
 
 def gpt3_query(headers: dict, data: str, model: str) -> str:
     r = httpx.post(
-        f"https://api.openai.com/v1/engines/{model}/completions",
+        f"http://localhost:8080/v1/engines/{model}/completions",
         headers=headers,
         data=data,
         timeout=None,
@@ -34,7 +34,7 @@ def gpt3_query(headers: dict, data: str, model: str) -> str:
 async def gpt3_query_async(headers: dict, data: str, model: str) -> str:
     async with httpx.AsyncClient() as client:
         r = await client.post(
-            f"https://api.openai.com/v1/engines/{model}/completions",
+            f"http://localhost:8080/v1/engines/{model}/completions",
             headers=headers,
             data=data,
             timeout=None,
